@@ -452,14 +452,15 @@ end
 define frame
     if $argc == 1
         select-frame $arg0
+    else
+        info frame
+        info args
+        info locals
     end
-    info frame
-    info args
-    info locals
 end
 document frame
 Syntax: frame <LEVEL>
-| Print current stack frame, or the LEVEL stack frame.
+| Print current stack frame, or select the LEVEL stack frame.
 end
 
 
